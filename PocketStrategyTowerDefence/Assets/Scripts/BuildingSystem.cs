@@ -40,6 +40,11 @@ public class BuildingSystem : MonoBehaviour
             return;
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            objectToPlace.Rotate();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (CanBePlaced(objectToPlace))
