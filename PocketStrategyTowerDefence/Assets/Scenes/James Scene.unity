@@ -573,5 +573,5 @@ MonoBehaviour:
   gridLayout: {fileID: 1130652045}
   MainTilemap: {fileID: 680254786}
   usedTile: {fileID: 11400000, guid: f3300855d52bd654abea1bf920f2166a, type: 2}
-  prefab1: {fileID: 3598397980923329124, guid: 8ccf5fedeac54cc448d030aa71655958, type: 3}
-  prefab2: {fileID: 5578262716062523286, guid: 85d1e66ba8a202c45956ebd019dd41c7, type: 3}
+  prefab1: {fileID: 4339014766283150761, guid: 7b04ea13cd5dbc1488177035afcbcffd, type: 3}
+  prefab2: {fileID: 3558144582776120322, guid: 96cf6725826511f458f2637a2d81b856, type: 3}
