@@ -6,20 +6,22 @@ public class TowerUpgrade : MonoBehaviour
 {
     public GameObject[] upgrades;
 
-    int currentUpgrade = 0;
+    public GameObject buttonPanel;
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            Fire();
-        }
-    }
+    int currentUpgrade = 0;
 
     public void Fire()
     {
         currentUpgrade = 1;
         SwitchObject(currentUpgrade);
+        Destroy(buttonPanel);
+    }
+
+    public void Water()
+    {
+        currentUpgrade = 2;
+        SwitchObject(currentUpgrade);
+        Destroy(buttonPanel);
     }
 
     void SwitchObject(int upgrade)
