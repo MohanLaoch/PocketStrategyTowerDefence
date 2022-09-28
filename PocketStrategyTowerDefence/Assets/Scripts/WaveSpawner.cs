@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -10,9 +11,16 @@ public class WaveSpawner : MonoBehaviour
     public float cooldown;
     public float countdown;
 
-    private int waveNumber = 0;
+    private int waveNumber = 1;
+    
+    public float minValueX;
+    public float minValueZ;
+    public float maxValueX;
+    public float maxValueZ;
 
-    public Transform spawnPoint;
+    public float spawnPointX;
+    public float spawnPointY;
+    public float spawnPointZ;
 
     private void Update()
     {
@@ -34,11 +42,15 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         
-        waveNumber++;
+        //waveNumber++;
     }
 
     private void SpawnEnemy()
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        spawnPointX = Random.Range(minValueX, maxValueX);
+        spawnPointZ = Random.Range(minValueZ, maxValueZ);
+        Vector3 spawnPosition = new Vector3(spawnPointX, spawnPointY, spawnPointZ);
+        
+        Instantiate(enemy, spawnPosition, Quaternion.identity);
     }
 }

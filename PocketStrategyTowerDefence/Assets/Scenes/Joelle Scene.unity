@@ -167,9 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5652236144509044618, guid: 39d5761b3bf2ee14f920ddf32646f5cb, type: 3}
-  cooldown: 5
+  cooldown: 2
   countdown: 2
-  spawnPoint: {fileID: 140305455}
+  minValueX: -10
+  minValueZ: 10
+  maxValueX: 10
+  maxValueZ: 10
+  spawnPointX: 0
+  spawnPointY: 0.343
+  spawnPointZ: 0
 --- !u!1001 &375853055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,9 +323,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5652236144509044618, guid: 39d5761b3bf2ee14f920ddf32646f5cb, type: 3}
-  cooldown: 5
+  cooldown: 2
   countdown: 2
-  spawnPoint: {fileID: 508163722}
+  minValueX: -10
+  minValueZ: -10
+  maxValueX: 10
+  maxValueZ: -10
+  spawnPointX: 0
+  spawnPointY: 0.343
+  spawnPointZ: 0
 --- !u!1 &535107312
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,9 +552,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5652236144509044618, guid: 39d5761b3bf2ee14f920ddf32646f5cb, type: 3}
-  cooldown: 5
+  cooldown: 2
   countdown: 2
-  spawnPoint: {fileID: 827096169}
+  minValueX: -10
+  minValueZ: -10
+  maxValueX: -10
+  maxValueZ: 10
+  spawnPointX: 0
+  spawnPointY: 0.343
+  spawnPointZ: 0
 --- !u!1 &865515736
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,9 +701,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5652236144509044618, guid: 39d5761b3bf2ee14f920ddf32646f5cb, type: 3}
-  cooldown: 5
+  cooldown: 2
   countdown: 2
-  spawnPoint: {fileID: 1459015123}
+  minValueX: 10
+  minValueZ: -10
+  maxValueX: 10
+  maxValueZ: 10
+  spawnPointX: 0
+  spawnPointY: 0.343
+  spawnPointZ: 0
 --- !u!1 &2106909375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4339014766283150761, guid: 7b04ea13cd5dbc1488177035afcbcffd, type: 3}
