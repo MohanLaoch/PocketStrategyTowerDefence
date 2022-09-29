@@ -13,7 +13,7 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private TileBase usedTile;
 
     public GameObject prefab1;
-    public GameObject prefab2;
+    //public GameObject prefab2;
 
     private PlaceableObject objectToPlace;
 
@@ -30,10 +30,10 @@ public class BuildingSystem : MonoBehaviour
         {
             InitializeWithObject(prefab1);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        /*else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             InitializeWithObject(prefab2);
-        }
+        }*/
 
         if (!objectToPlace)
         {

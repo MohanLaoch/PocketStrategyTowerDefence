@@ -7,6 +7,7 @@ public class PlaceableObject : MonoBehaviour
 {
 
     public GameObject towerUI;
+    public GameObject buttonsPanel;
 
     public bool Placed { get; private set; }
     public Vector3Int Size { get; private set; }
@@ -68,6 +69,7 @@ public class PlaceableObject : MonoBehaviour
         Placed = true;
 
         towerUI.SetActive(true);
+        buttonsPanel.SetActive(true);
 
         //invoke events of placement
     }
