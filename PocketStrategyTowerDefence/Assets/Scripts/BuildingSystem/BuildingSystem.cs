@@ -12,8 +12,8 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private Tilemap MainTilemap;
     [SerializeField] private TileBase usedTile;
 
-    public GameObject prefab1;
-    //public GameObject prefab2;
+    public GameObject PlaceableTowerPrefab;
+    public GameObject PlaceableTowerTest;
 
     private PlaceableObject objectToPlace;
 
@@ -28,12 +28,12 @@ public class BuildingSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            InitializeWithObject(prefab1);
+            InitializeWithObject(PlaceableTowerPrefab);
         }
-        /*else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            InitializeWithObject(prefab2);
-        }*/
+            InitializeWithObject(PlaceableTowerTest);
+        }
 
         if (!objectToPlace)
         {
