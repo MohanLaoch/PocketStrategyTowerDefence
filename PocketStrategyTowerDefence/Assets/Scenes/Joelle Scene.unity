@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaceableTower
       objectReference: {fileID: 0}
+    - target: {fileID: 1741021109728610414, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
+      propertyPath: m_TagString
+      value: BasicTower
+      objectReference: {fileID: 0}
     - target: {fileID: 1741021109728610417, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -515,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1741021109728610419, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1741021109728610419, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -523,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1741021109728610419, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -13.8
       objectReference: {fileID: 0}
     - target: {fileID: 1741021109728610419, guid: d70fed67d7dee8f408b06b9518bf398b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -695,11 +699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5845928812753988973, guid: b58efb5d45a0f7f479403987ad605a3c, type: 3}
       propertyPath: cooldown
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5845928812753988973, guid: b58efb5d45a0f7f479403987ad605a3c, type: 3}
       propertyPath: countdown
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5845928812753988979, guid: b58efb5d45a0f7f479403987ad605a3c, type: 3}
       propertyPath: m_IsActive
