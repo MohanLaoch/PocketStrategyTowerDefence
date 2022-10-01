@@ -5,12 +5,17 @@ using UnityEngine.Tilemaps;
 
 public class BuildingSystem : MonoBehaviour
 {
+
     public static BuildingSystem current;
+
+    [Header("TileMap ")]
 
     public GridLayout gridLayout;
     private Grid grid;
     [SerializeField] private Tilemap MainTilemap;
     [SerializeField] private TileBase usedTile;
+
+    [Header("Placeable Towers")]
 
     public GameObject PlaceableTowerPrefab;
     public GameObject PlaceableTowerTest;

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Central
   - Enemy
+  - Arrow
+  - BasicTower
+  - FireTower
+  - WaterTower
   layers:
   - Default
   - TransparentFX
