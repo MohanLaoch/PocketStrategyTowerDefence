@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,20 @@ using UnityEngine;
 public class EnemyHP : MonoBehaviour
 {
     //this is literally just a copy of the placeable tower stats but in a separate script
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
-    private void Start()
+    void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Arrow"))
+        {
+            TakeDamage(10);
+        }
+
     }
 
     // Update is called once per frame
