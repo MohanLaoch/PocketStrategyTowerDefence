@@ -16,7 +16,7 @@ public class AI : MonoBehaviour
 
     private float shortestDistance;
 
-    public GameObject nearestTower = null;
+    public GameObject nearestTower;
     
     public NavMeshAgent Agent;
 
@@ -25,6 +25,7 @@ public class AI : MonoBehaviour
         mainTower = GameObject.FindGameObjectWithTag("Central").GetComponent<Transform>();
         target = mainTower;
         Agent = GetComponent<NavMeshAgent>();
+        nearestTower = null;
     }
 
     void Start()
@@ -32,7 +33,7 @@ public class AI : MonoBehaviour
         Agent.SetDestination(target.position);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         turretTowers = GameObject.FindGameObjectsWithTag("BasicTower");
         distanceToMain = Vector3.Distance(transform.position, mainTower.position);
@@ -62,8 +63,15 @@ public class AI : MonoBehaviour
             else
             {
                 target = mainTower;
+                Agent.SetDestination(target.position);
             }
-                
         }
+
+        if (turretTowers.Length == 0)
+        {
+            target = mainTower;
+            Agent.SetDestination(target.position); 
+        }
+
     }
 }
