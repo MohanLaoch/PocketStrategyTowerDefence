@@ -8,12 +8,34 @@ public class PrimaryTowerUpgrade : MonoBehaviour
 
     int currentLevel = 0;
 
-    public void Update()
+    [Header("HealthBar")]
+
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+    public int healthUpgrade = 50;
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            Upgrade();
+            TakeDamage(20);
         }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
     }
 
     public void Upgrade()
@@ -22,6 +44,8 @@ public class PrimaryTowerUpgrade : MonoBehaviour
         {
             currentLevel++;
             SwitchObject(currentLevel);
+            maxHealth += healthUpgrade;
+            currentHealth += healthUpgrade;
         }
     }
 
