@@ -12,7 +12,7 @@ public class AI : MonoBehaviour
 
     private float distanceToMain;
     private float distanceToTower;
-    private float range = 5f;
+    private float range = 15f;
 
     private float shortestDistance;
 
@@ -35,7 +35,7 @@ public class AI : MonoBehaviour
 
     private void Update()
     {
-        turretTowers = GameObject.FindGameObjectsWithTag("BasicTower");
+        turretTowers = GameObject.FindGameObjectsWithTag("PlaceableTower");
         distanceToMain = Vector3.Distance(transform.position, mainTower.position);
         SetTarget();
     }

@@ -35,7 +35,7 @@ public class PlaceableTowerStats : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && !invulnerable)
         {
-            TakeDamage(20);
+            TakeDamage(5);
         }
     }
 

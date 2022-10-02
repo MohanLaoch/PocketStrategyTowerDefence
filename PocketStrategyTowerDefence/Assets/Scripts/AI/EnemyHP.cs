@@ -17,7 +17,7 @@ public class EnemyHP : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            TakeDamage(10);
+            TakeDamage(25);
         }
 
     }

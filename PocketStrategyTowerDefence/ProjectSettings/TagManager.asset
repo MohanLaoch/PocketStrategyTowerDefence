@@ -10,6 +10,7 @@ TagManager:
   - BasicTower
   - FireTower
   - WaterTower
+  - PlaceableTower
   layers:
   - Default
   - TransparentFX
