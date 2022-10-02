@@ -12,6 +12,7 @@ public class TowerUpgrade : MonoBehaviour
 
     public void Fire()
     {
+        FindObjectOfType<AudioManager>().Play("UpgradeTowerFire");
         currentUpgrade = 1;
         SwitchObject(currentUpgrade);
         Destroy(buttonPanel);
@@ -19,6 +20,7 @@ public class TowerUpgrade : MonoBehaviour
 
     public void Water()
     {
+        FindObjectOfType<AudioManager>().Play("UpgradeTowerWater");
         currentUpgrade = 2;
         SwitchObject(currentUpgrade);
         Destroy(buttonPanel);

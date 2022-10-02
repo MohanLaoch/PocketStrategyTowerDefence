@@ -27,6 +27,7 @@ public class EnemyHP : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDiesViolently");
             Destroy(this.gameObject);
         }
     }

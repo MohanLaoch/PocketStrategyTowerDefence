@@ -26,6 +26,7 @@ public class PlaceableTowerStats : MonoBehaviour
         */
         if (currentHealth <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("DestroyTower");
             Destroy(this.gameObject);
         }
     }

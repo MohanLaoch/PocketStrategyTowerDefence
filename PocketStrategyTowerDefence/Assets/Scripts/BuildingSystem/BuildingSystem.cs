@@ -33,6 +33,7 @@ public class BuildingSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            FindObjectOfType<AudioManager>().Play("SpawnTower");
             InitializeWithObject(PlaceableTowerPrefab);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -54,6 +55,7 @@ public class BuildingSystem : MonoBehaviour
         {
             if (CanBePlaced(objectToPlace))
             {
+                FindObjectOfType<AudioManager>().Play("PlaceTower");
                 objectToPlace.Place();
                 Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
                 TakeArea(start, objectToPlace.Size);
@@ -65,6 +67,7 @@ public class BuildingSystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
+            FindObjectOfType<AudioManager>().Play("DestroyTower");
             Destroy(objectToPlace.gameObject); 
         }
     }
