@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PrimaryTowerUpgrade : MonoBehaviour
 {
     public GameObject[] levels;
 
     int currentLevel = 0;
+
+    public bool invulnerable;
+    private float cooldownTime = 1f;
 
     [Header("HealthBar")]
 
@@ -17,25 +21,24 @@ public class PrimaryTowerUpgrade : MonoBehaviour
 
     public int healthUpgrade = 50;
 
+    public TMP_Text hpText;
+
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            TakeDamage(20);
-        }
+        hpText.text = currentHealth + "/" + maxHealth.ToString();
     }
 
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
         healthBar.SetHealth(currentHealth);
+        StartCoroutine(DamageCooldown());
     }
 
     public void Upgrade()
@@ -46,6 +49,7 @@ public class PrimaryTowerUpgrade : MonoBehaviour
             SwitchObject(currentLevel);
             maxHealth += healthUpgrade;
             currentHealth += healthUpgrade;
+            
         }
     }
 
@@ -62,5 +66,20 @@ public class PrimaryTowerUpgrade : MonoBehaviour
                 levels[i].SetActive(false);
             }
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Enemy") && !invulnerable)
+        {
+            TakeDamage(1);
+        }
+    }
+
+    IEnumerator DamageCooldown()
+    {
+        invulnerable = true;
+        yield return new WaitForSeconds(cooldownTime);
+        invulnerable = false;
     }
 }

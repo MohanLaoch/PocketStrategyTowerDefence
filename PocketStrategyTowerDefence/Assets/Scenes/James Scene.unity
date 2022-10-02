@@ -7760,7 +7760,6 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 1020781909}
-  hpText: {fileID: 229595982}
 --- !u!114 &995926785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15812,10 +15811,12 @@ MonoBehaviour:
   - {fileID: 8164078558836282901}
   - {fileID: 7333665107077502015}
   - {fileID: 8229805616870437415}
+  invulnerable: 0
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 995926784}
   healthUpgrade: 50
+  hpText: {fileID: 229595982}
 --- !u!65 &919132149493444302
 BoxCollider:
   m_ObjectHideFlags: 0
