@@ -8515,7 +8515,7 @@ GameObject:
   - component: {fileID: 1130652045}
   - component: {fileID: 1130652047}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: BuildingGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9931,7 +9931,7 @@ Transform:
   - {fileID: 1940952254}
   - {fileID: 869709650}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1328846395
 PrefabInstance:
@@ -12291,7 +12291,7 @@ Transform:
   - {fileID: 2139594945}
   - {fileID: 1352873356}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1689685275
 PrefabInstance:
@@ -15700,7 +15700,7 @@ GameObject:
   - component: {fileID: 6245167426466014541}
   - component: {fileID: 7462166128362242521}
   m_Layer: 0
-  m_Name: WizardMesh
+  m_Name: WizardRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15762,7 +15762,7 @@ Transform:
   - {fileID: 1977158238874240772}
   - {fileID: 900733001666502940}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &900733001666502940
 Transform:
@@ -15790,7 +15790,7 @@ GameObject:
   - component: {fileID: 919132149493444302}
   - component: {fileID: 919132149493444301}
   m_Layer: 0
-  m_Name: PrimaryTower
+  m_Name: CentralTower
   m_TagString: Central
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
