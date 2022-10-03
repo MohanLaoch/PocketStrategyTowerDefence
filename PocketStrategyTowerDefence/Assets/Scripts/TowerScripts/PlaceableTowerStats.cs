@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlaceableTowerStats : MonoBehaviour
 {
+    public HealthBar healthBar;
+
     public int maxHealth = 100;
     public int currentHealth;
     public bool invulnerable;
@@ -13,6 +15,7 @@ public class PlaceableTowerStats : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         invulnerable = false;
     }
     
@@ -43,6 +46,7 @@ public class PlaceableTowerStats : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
         StartCoroutine(DamageCooldown());
     }
 

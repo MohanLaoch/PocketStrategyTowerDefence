@@ -29,9 +29,16 @@ public class BuildingSystem : MonoBehaviour
         grid = gridLayout.gameObject.GetComponent<Grid>();
     }
 
+    public void CreateTower()
+    {
+        FindObjectOfType<AudioManager>().Play("SpawnTower");
+        InitializeWithObject(PlaceableTowerPrefab);
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             FindObjectOfType<AudioManager>().Play("SpawnTower");
             InitializeWithObject(PlaceableTowerPrefab);
@@ -39,7 +46,7 @@ public class BuildingSystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             InitializeWithObject(PlaceableTowerTest);
-        }
+        }*/
 
         if (!objectToPlace)
         {
