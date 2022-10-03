@@ -793,7 +793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5929448160308316804
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,6 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerUI: {fileID: 5929448159733488901}
   buttonsPanel: {fileID: 5929448160279414646}
+  placeableTower: {fileID: 5929448161345190753}
 --- !u!114 &5929448161345190757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1094,7 @@ MonoBehaviour:
   partToRotate: {fileID: 5929448160308316804}
   arrowPrefab: {fileID: 3029049822413453202, guid: 7cf64d02d9257ed44864a0d3a873de73, type: 3}
   firePoint: {fileID: 5929448161003486641}
+  canShoot: 0
 --- !u!1 &5929448161629888568
 GameObject:
   m_ObjectHideFlags: 0

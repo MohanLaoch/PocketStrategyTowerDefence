@@ -23,6 +23,7 @@ public class PrimaryTowerUpgrade : MonoBehaviour
 
     public TMP_Text hpText;
 
+
     private void Start()
     {
         currentHealth = maxHealth;

@@ -26,6 +26,8 @@ public class PlaceableTower : MonoBehaviour
     public GameObject arrowPrefab;
     public Transform firePoint;
 
+    public bool canShoot = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -73,11 +75,14 @@ public class PlaceableTower : MonoBehaviour
 
         if (fireCountdown <= 0f)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            if (canShoot)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
         }
 
-        fireCountdown -= Time.deltaTime;
+            fireCountdown -= Time.deltaTime;
     }
 
     void Shoot()

@@ -24,6 +24,8 @@ public class BuildingSystem : MonoBehaviour
 
     private bool canCreate = true;
 
+    public Vector3 spawnPosition;
+
     private void Awake()
     {
         current = this;
@@ -126,7 +128,7 @@ public class BuildingSystem : MonoBehaviour
 
     public void InitializeWithObject(GameObject prefab)
     {
-        Vector3 position = SnapCoordinateToGrid(Vector3.zero);
+        Vector3 position = SnapCoordinateToGrid(spawnPosition);
 
         GameObject obj = Instantiate(prefab, position, Quaternion.identity);
         objectToPlace = obj.GetComponent<PlaceableObject>();
