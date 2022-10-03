@@ -20,7 +20,7 @@ public class CreateFireBall : MonoBehaviour
             {
                 Vector3 pointToLook = cameraRay.GetPoint(rayLength);
 
-                Instantiate(fireball, new Vector3(pointToLook.x, 0, pointToLook.z), Quaternion.identity);
+                Instantiate(fireball, new Vector3(pointToLook.x, 1, pointToLook.z), Quaternion.identity);
                 
                 
             }
