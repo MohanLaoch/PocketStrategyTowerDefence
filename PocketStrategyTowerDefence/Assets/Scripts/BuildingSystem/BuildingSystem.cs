@@ -22,6 +22,7 @@ public class BuildingSystem : MonoBehaviour
 
     private PlaceableObject objectToPlace;
 
+    private bool canCreate = true;
 
     private void Awake()
     {
@@ -31,11 +32,15 @@ public class BuildingSystem : MonoBehaviour
 
     public void CreateTower()
     {
-        FindObjectOfType<AudioManager>().Play("SpawnTower");
-        InitializeWithObject(PlaceableTowerPrefab);
-    }
+        if (canCreate == true)
+        {
+            FindObjectOfType<AudioManager>().Play("SpawnTower");
+            InitializeWithObject(PlaceableTowerPrefab);
+            canCreate = false;
+        }
+        }
 
-    private void Update()
+        private void Update()
     {
 
         /*if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -66,10 +71,12 @@ public class BuildingSystem : MonoBehaviour
                 objectToPlace.Place();
                 Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
                 TakeArea(start, objectToPlace.Size);
+                canCreate = true;
             }
             else
             {
                 Destroy(objectToPlace.gameObject);
+                canCreate = true;
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
