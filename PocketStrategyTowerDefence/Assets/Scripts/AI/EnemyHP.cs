@@ -19,6 +19,10 @@ public class EnemyHP : MonoBehaviour
         {
             TakeDamage(25);
         }
+        if (other.CompareTag("Fireball"))
+        {
+            TakeDamage(15);
+        }
 
     }
 

@@ -11,6 +11,7 @@ TagManager:
   - FireTower
   - WaterTower
   - PlaceableTower
+  - Fireball
   layers:
   - Default
   - TransparentFX

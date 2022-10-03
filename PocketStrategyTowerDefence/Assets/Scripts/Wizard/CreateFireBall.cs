@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class CreateFireBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject fireball;
+    public Camera mainCamera;
+
+    public void Update()
     {
-        
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLength;
+
+            
+            if (groundPlane.Raycast(cameraRay, out rayLength))
+            {
+                Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+
+                Instantiate(fireball, new Vector3(pointToLook.x, 0, pointToLook.z), Quaternion.identity);
+                
+                
+            }
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+
+
 }
+
