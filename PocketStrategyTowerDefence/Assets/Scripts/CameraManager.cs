@@ -22,7 +22,7 @@ public class CameraManager : MonoBehaviour
 
             children[currentCam].SetActive(false);
 
-            if (currentCam == 4)
+            if (currentCam == 1)
             {
                 currentCam = 0;
             }
